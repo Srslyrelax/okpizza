@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: normal;
+}
+
+/* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    #mobile {
+        visibility: visible;
+        }
+    #desktop {
+        visibility: collapse;
+    }
+   
+    @media only screen and (min-width: 600px) {
+        #mobile {
+        visibility: collapse;
+        }
+        #desktop {
+            visibility: visible;
+        }
+    }
+
+body {
+    background: #a51818;
+
+}
+.main .container {
+    background: #f6d6ad;
+    width: 90vw ;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.5rem;
+}
+
+
+.fixed-header,
+.fixed-footer {
+    width: 100%;
+    position: fixed;
+    color: #fff;
+    margin: 0 auto;
+}
+.fixed-header {
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    top: 0;
+    background: #d30000;
+    border-radius: 0.2rem;
+}
+
+.numbers a {
+    margin: 0 auto;
+    color: white;
+    text-decoration: none;
+    padding: 1vh 1vw;
+    display: inline-block;
+    background: #a51818;
+    border-radius: 1rem;
+}
+
+.fixed-footer {
+    bottom: 0;
+    background: green;
+    border-radius: 0.2rem;
+}
+
+/* Some more styles to beutify this example */
+
+.nav a {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.nav a {
+    margin: 0 auto;
+    color: white;
+    text-decoration: none;
+    padding: 1vh 1vw;
+    display: inline-block;
+    background: #a51818;
+    border-radius: 1rem;
+}
+.nav img {
+    padding: 0;
+    float: left;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.col {
+    //flex: 1;
+    background-image: url(../img/1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    // border: 1px black solid;
+    //margin: 20px;
+    height: 200px;
+    width: 200px;
+}   
+
+.col p {
+color: #f1D6ad;
+font-family: calibri, sans-serif;
+text-shadow: 0.5px 0.5px black; 
+font-size: 15px;
+}
+
+.container iframe {
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 20vw;
+    padding-right: 20vw;
+
+}
+
+.main .container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    font-size: 2.5vw;
+    grid-gap: 2vw;
+}
+
+.main-grid img {
+    width: 100%;
+    }
+
+.main-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1vw;
+}

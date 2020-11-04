@@ -25,12 +25,14 @@
   }
 }
 
-body {
-  background: #a51818;
+.main {
+  background-image: url(../img/pizza-background.png), url(../img/pizza-ingredients.jpg), url(../img/pizza-dough.jpg);
+  background-position: top, center, bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .main .container {
-  background: #f6d6ad;
   width: 90vw;
   margin: 0 auto;
   padding-top: 80px;
@@ -38,6 +40,10 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   font-size: 0.5rem;
+}
+
+.main .container p {
+  background: #f6d6ad;
 }
 
 .fixed-header,
@@ -54,7 +60,8 @@ body {
   -ms-grid-columns: 2fr 6fr 4fr;
       grid-template-columns: 2fr 6fr 4fr;
   top: 0;
-  background: #d30000;
+  background-image: url(../img/pizza-dough.jpg);
+  background-size: cover;
   border-radius: 0.2rem;
 }
 

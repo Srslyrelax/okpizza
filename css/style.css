@@ -1,32 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   word-wrap: normal;
 }
 
 /* Add some padding on document's body to prevent the content
-    to go underneath the header and footer */
-#mobile {
-  visibility: visible;
-}
-
-#desktop {
-  visibility: collapse;
-}
-
+      to go underneath the header and footer */
 @media only screen and (min-width: 600px) {
-  #mobile {
-    visibility: collapse;
-  }
-  #desktop {
-    visibility: visible;
+  .mobile {
+    pointer-events: none;
   }
 }
 
 .main {
-  background-image: url(../img/pizza-background.png), url(../img/pizza-ingredients.jpg), url(../img/pizza-dough.jpg);
+  background-image: url(../img/pizza-ingredients.jpg), url(../img/pizza-dough.jpg);
   background-position: top, center, bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -57,19 +47,20 @@
 .fixed-header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 6fr 4fr;
-      grid-template-columns: 2fr 6fr 4fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   top: 0;
   background-image: url(../img/pizza-dough.jpg);
   background-size: cover;
   border-radius: 0.2rem;
+  font-size: 0.8rem;
+  text-overflow: auto;
 }
 
 .numbers a {
   margin: 0 auto;
   color: white;
   text-decoration: none;
-  padding: 1vh 1vw;
   display: inline-block;
   background: #a51818;
   border-radius: 1rem;
@@ -83,9 +74,164 @@
 
 /* Some more styles to beutify this example */
 .nav a {
-  margin-left: auto;
-  margin-right: auto;
   display: inline-block;
+}
+
+.nav {
+  display: inline-block;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1vh 1vw;
+  display: inline-block;
+  background: #a51818;
+  border-radius: 1rem;
+}
+
+.nav img {
+  padding: 0;
+  float: left;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.col {
+  background-image: url(../img/1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+}
+
+.col p {
+  color: #f1d6ad;
+  font-family: calibri, sans-serif;
+  text-shadow: 0.5px 0.5px black;
+  font-size: 15px;
+}
+
+.container iframe {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.main .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto;
+  grid-template-rows: auto auto auto;
+  font-size: 2.5vw;
+  grid-gap: 2vw;
+}
+
+.main-grid img {
+  width: 100%;
+}
+
+.main-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1vw;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+.menu-container-top {
+  padding-top: 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: normal;
+}
+
+/* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+.main {
+  background-image: url(../img/pizza-ingredients.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.main .container {
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 0.5rem;
+}
+
+.main .container p {
+  background: #f6d6ad;
+}
+
+.spacer {
+  display: none;
+}
+
+.fixed-header,
+.fixed-footer {
+  width: 100%;
+  position: fixed;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.fixed-header {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 2fr 8fr 3fr ;
+  top: 0;
+  background-image: url(../img/pizza-background.png);
+  background-size: cover;
+  border-radius: 0.2rem;
+}
+
+.numbers a {
+  margin: 0 auto;
+  color: white;
+  text-decoration: none;
+  padding: 1vh 1vw;
+    /* display: inline-block; */
+  background: #a51818;
+  border-radius: 1rem;
+}
+
+.nav {
+  text-align: center;
+  
+  }
+
+.fixed-footer {
+  bottom: 0;
+  background: green;
+  border-radius: 0.2rem;
 }
 
 .nav a {
@@ -93,9 +239,29 @@
   color: white;
   text-decoration: none;
   padding: 1vh 1vw;
-  display: inline-block;
+  /* display: inline-block; */
   background: #a51818;
   border-radius: 1rem;
+}
+
+.contacts {
+  padding-top: 60px ;
+  text-align: center;
+  padding-left: auto;
+  margin: auto;
+  padding-right: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/pizzarest.jpg);
+  background-size: cover, contain;
+}
+
+.logo {
+  width: 75px;
+  height: 50px;
+}
+
+.map {
+width:90vw;
+height: 90vh;
 }
 
 .nav img {
@@ -125,7 +291,7 @@
 }
 
 .col p {
-  color: #f1D6ad;
+  color: #f1d6ad;
   font-family: calibri, sans-serif;
   text-shadow: 0.5px 0.5px black;
   font-size: 15px;
@@ -164,7 +330,250 @@
   height: auto;
 }
 
-.menu-container-top {
-  padding-top: 70px;
+.menu-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 0 0 auto;
+      flex-basis: 0 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 60px;
+}
+
+.menu-grid-item {
+  font-weight: bolder;
+  border-radius: 20px;
+  color: beige;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  width: 300px;
+  height: 450px;
+}
+
+.menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/pizza-ingredients.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/pizza-ingredients.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-grid-item:nth-child(1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Hawaiianpizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Hawaiianpizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Pepperonipizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Pepperonipizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(3) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Pandmushpizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Pandmushpizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(4) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Canadianpizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Canadianpizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(5) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/meatpizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/meatpizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(6) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Triplecrown.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Triplecrown.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(7) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/cheesepizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/cheesepizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(8) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/veggiepizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/veggiepizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.menu-grid-item:nth-child(9) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/veggiepizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Supremepizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(10) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Supremepizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/margpizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(11) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/margpizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Creamalfredo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(12) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Creamalfredo.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/maraspagetti.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(13) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/macandcheese.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/macandcheese.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(14) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/meatballs.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/meatballs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(15) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/pepperonical.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/pepperonical.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(16) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/spicyitcal.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/spicyitcal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(17) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/newyorkcal.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/newyorkcal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(18) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/cheesecal.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/cheesecal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(19) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/caessalad.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/caessalad.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(20) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/chickenwings.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/garsalad.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(21) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/brownies.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/chickenwings.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(22) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/cannoli.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/brownies.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(23) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/pop.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/cannoli.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(24) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Supremepizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/pop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(25) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Supremepizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Supremepizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:nth-child(26) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/Supremepizza.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/Supremepizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-grid-item:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 50, 0.6)), to(rgba(0, 0, 50, 0.6)));
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6));
 }
 /*# sourceMappingURL=style.css.map */

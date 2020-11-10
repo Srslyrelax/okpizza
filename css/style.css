@@ -158,4 +158,13 @@
       grid-template-columns: 1fr 1fr;
   grid-gap: 1vw;
 }
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+.menu-container-top {
+  padding-top: 70px;
+}
 /*# sourceMappingURL=style.css.map */
